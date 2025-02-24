@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <link rel="stylesheet" href="bidimensional.css">
+</head>
+<body>
+    <h1 class="title">Cadastro de Funcionários</h1>
+    
+    <div class="form-card1">
+        <div class="form-card2">
+            <form id="formFuncionario" class="form">
+                <div class="form-field">
+                    <label for="id">ID:</label>
+                    <input class="input-field" type="number" id="id" name="id" required>
+                </div>
+                
+                <div class="form-field">
+                    <label for="colaborador">Colaborador:</label>
+                    <input class="input-field" type="text" id="colaborador" name="colaborador" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input class="input-field" type="date" id="dataNascimento" name="dataNascimento" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="cargo">Cargo:</label>
+                    <input class="input-field" type="text" id="cargo" name="cargo" required>
+                </div>
+
+                <button class="sendMessage-btn" type="button" onclick="cadastrar()">Cadastrar</button>
+                <button class="sendMessage-btn" type="button" onclick="consultar()">Consultar</button>
+                <button class="sendMessage-btn" type="button" onclick="excluir()">Excluir</button>
+                <button class="sendMessage-btn" type="button" onclick="alterar()">Alterar</button>
+            </form>
+        </div>
+    </div>
+
+    <h2 class="title">Funcionários Cadastrados</h2>
+    <div id="listaFuncionarios">
+        <table class="tab" id="tabelaFuncionarios" border ="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Colaborador</th>
+                    <th>Data de Nascimento</th>
+                    <th>Cargo</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="bidimensional.js"></script>
+</body>
+</html>
